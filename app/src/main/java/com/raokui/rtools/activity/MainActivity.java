@@ -10,11 +10,7 @@ import com.raokui.rtools.presenter.MainPresenter;
 public class MainActivity extends BaseActivity<MainContract.View, MainPresenter>
         implements MainContract.View {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+
 
     @Override
     protected MainPresenter initPresenter() {
