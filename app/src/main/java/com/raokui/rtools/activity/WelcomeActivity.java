@@ -47,10 +47,10 @@ public class WelcomeActivity extends AppCompatActivity {
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            btnSkip.setText("跳过：" + time + "s");
+            btnSkip.setText("跳过:" + time + "s");
             handler.postDelayed(this, 1000);
             time--;
-            if (time == 0) {
+            if (time == -1) {
                 Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);
                 handler.removeCallbacks(runnable);
