@@ -1,7 +1,5 @@
 package com.raokui.rtools.activity;
 
-import android.os.Bundle;
-
 import com.raokui.rtools.R;
 import com.raokui.rtools.base.BaseActivity;
 import com.raokui.rtools.contract.MainContract;
@@ -9,7 +7,6 @@ import com.raokui.rtools.presenter.MainPresenter;
 
 public class MainActivity extends BaseActivity<MainContract.View, MainPresenter>
         implements MainContract.View {
-
 
 
     @Override

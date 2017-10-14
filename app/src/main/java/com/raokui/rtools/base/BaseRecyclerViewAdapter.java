@@ -20,8 +20,8 @@ public abstract class BaseRecyclerViewAdapter<T, H extends RecyclerView.ViewHold
 
     private List<T> mDataList = new ArrayList<>();
 
-    public  void setData(List<T> dataList) {
-      this.mDataList = dataList;
+    public void setData(List<T> dataList) {
+        this.mDataList = dataList;
         notifyDataSetChanged();
     }
 
@@ -43,7 +43,7 @@ public abstract class BaseRecyclerViewAdapter<T, H extends RecyclerView.ViewHold
     @Override
     public void onBindViewHolder(H holder, int position) {
         T data = mDataList.get(position);
-        setBindViewHolder(holder,data, position);
+        setBindViewHolder(holder, data, position);
     }
 
     @Override
