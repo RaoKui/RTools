@@ -2,7 +2,7 @@ package com.raokui.rtools.contract;
 
 import com.raokui.rtools.bean.PlanBean;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by RaoKui on 2017/10/14.
@@ -11,12 +11,13 @@ import java.util.ArrayList;
 public interface PlanContract {
 
     interface View {
-        void showPlanList(ArrayList<PlanBean> dataList);
+        void showPlanList(List<PlanBean> dataList);
 
     }
 
     interface Presenter {
         void getPlanList(int type);
+        void getAllPlan();
     }
 
 }

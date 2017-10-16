@@ -8,7 +8,7 @@ import com.raokui.rtools.bean.PlanBean;
 import com.raokui.rtools.contract.PlanContract;
 import com.raokui.rtools.presenter.PlanPresenter;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by RaoKui on 2017/10/14.
@@ -34,7 +34,7 @@ public class PlanFragment extends BaseFragment<PlanContract.View, PlanPresenter>
 
     @Override
     protected void initData() {
-
+        mPresenter.getPlanList(0);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class PlanFragment extends BaseFragment<PlanContract.View, PlanPresenter>
     }
 
     @Override
-    public void showPlanList(ArrayList<PlanBean> dataList) {
+    public void showPlanList(List<PlanBean> dataList) {
 
     }
 }

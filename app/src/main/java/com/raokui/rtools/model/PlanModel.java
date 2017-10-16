@@ -1,8 +1,9 @@
 package com.raokui.rtools.model;
 
 import com.raokui.rtools.bean.PlanBean;
+import com.raokui.rtools.sql.PlanDao;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -16,11 +17,13 @@ import io.reactivex.annotations.NonNull;
 
 public class PlanModel {
 
-    public Observable<ArrayList<PlanBean>> getPlanList(int type) {
-        return Observable.create(new ObservableOnSubscribe<ArrayList<PlanBean>>() {
+    public Observable<List<PlanBean>> getPlanList(int type) {
+        return Observable.create(new ObservableOnSubscribe<List<PlanBean>>() {
             @Override
-            public void subscribe(@NonNull ObservableEmitter<ArrayList<PlanBean>> e) throws Exception {
-                
+            public void subscribe(@NonNull ObservableEmitter<List<PlanBean>> e) throws Exception {
+                List<PlanBean> dataList = PlanDao.queryAllPlan();
+                e.onNext(dataList);
+                e.onComplete();
             }
         });
     }
